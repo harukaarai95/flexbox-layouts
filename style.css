@@ -1,0 +1,382 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+html,body{
+    height:100%;
+}
+
+/*body{
+    min-height: 1500px;
+}*/
+
+/*.inline-block{
+    display: inline-block;
+    margin-left: 10px;
+}*/
+
+/*.spacer {
+    display: inline-block;
+    width: 75%;
+}*/
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/*navigation*/
+.header{
+    background-color: black;
+    display: flex;
+    height: 70px;
+    align-items: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+nav img {
+    max-height: 48px;
+    background-color: white;
+    margin-left: 20px;
+}
+
+nav{
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.global-menu {
+    display: flex;
+}
+.global-item{
+    position: relative;
+    margin: 0px 20px;
+    font-size: 15px;
+    padding-top: 25px;
+}
+.global-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* nav a: */
+nav ul li a:link,
+nav ul li a:visited,
+footer ul li a:link,
+footer ul li a:visited {
+    color:  white;
+}
+
+nav ul li a:hover,
+footer ul li a:hover {
+    color: rgb(229, 145, 0);
+}
+
+nav ul li a:active,
+footer ul li a:active {
+    color: rgb(92, 229, 0);
+}
+
+#current-page {
+    color: aquamarine;
+}
+
+/*Dropdown menu*/
+.drpdwn{
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+}
+
+.global-item:hover .drpdwn {
+    display: block;/* hovered->show*/
+}
+
+.drpdwn-item{
+    background-color: black;
+    height: 60px;
+    position: relative;
+    width: 120px;
+}
+/*MAIN*/
+main h2 {
+    margin-bottom: 16px;
+}
+
+article p {
+    margin-top: 16px;
+}
+
+main {
+    padding: 24px;
+    /*min-height: 1300px;*/
+    text-align: center;
+}
+
+/*footer*/
+footer{
+    background-color: #1f1f1f;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-flex ul{
+    display: flex;
+    justify-content: center;
+}
+footer li{
+padding: 10px;
+}
+
+h1, h2, .right li{
+    text-align: center;
+    font-weight: normal;
+}
+
+footer p{
+    text-align: center;
+    margin: 20px;
+    color: white;
+    padding-bottom: 10px;
+}
+
+hr{
+    border: solid white 1px;
+}
+.pagetop {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background: rgb(203, 203, 203);
+    border: solid 2px #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /*to display button on top surface*/
+}
+
+.pagetop__arrow {
+    height: 10px;
+    width: 10px;
+    border-top: 3px solid #000;
+    border-right: 3px solid #000;
+    transform: translateY(20%) rotate(-45deg); /*to make arrow using border*/
+}
+
+.pagetop:hover{
+    background-color: #6d6d6d;
+}
+
+/*float-left-flex page*/
+.flex{
+    display: flex;
+}
+
+.main-wrapper{
+    border: solid black 1px;
+    background-color: #d9d9d9;
+}
+
+.float-left{
+    float: left;
+}
+
+.float-left img{
+    box-sizing: border-box;
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+}
+
+/*float-right-flex page2*/
+.float-right{
+    float: right;
+}
+
+.float-right img{
+    box-sizing: border-box;
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+}
+
+/*all flex*/
+#all-flexbox{
+    background-color: rgb(204, 255, 191);
+    margin: 15px;
+    border: solid black 1px;
+    padding: 10px;
+}
+
+.flex-wrapper p{
+    border: solid black 1px;
+}
+
+.flex-item-1{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-item-1 p{
+    border: solid black 1px;
+    background-color: rgb(250, 248, 180);
+    flex: 1;
+    box-sizing: border-box;
+    height: 300px;
+    line-height: 300px;
+    margin: 10px;
+}
+
+.flex-item-2{
+    display: flex;
+}
+
+.flex-item-2 p{
+    box-sizing: border-box;
+    height: 300px;
+    line-height: 300px;
+    flex: 1;
+    margin: 10px;
+    border: solid black 1px;
+    background-color: rgb(255, 170, 191);
+}
+
+/*GALLERLY*/
+
+.g-h1{
+    margin: 10px;
+    color: rgb(0, 45, 0);
+}
+
+.g-header{
+    background-color: rgb(252, 249, 241);
+    display: flex;
+    height: 70px;
+    align-items: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+/* G nav a: */
+.g-header nav ul li a:link,
+.g-header nav ul li a:visited,
+.g-foot > .footer-flex ul li a:link,
+.g-foot > .footer-flex ul li a:visited,
+.g-main-flex nav ul li a:link,
+.g-main-flex nav ul li a:visited{
+    color:  green;
+}
+
+.g-header nav ul li a:hover,
+.g-header footer ul li a:hover,
+.g-main-flex nav ul li a:hover,
+.footer-flex ul li a:hover {
+    color: rgb(229, 145, 0);
+}
+
+.g-header nav ul li a:active,
+.g-header  footer ul li a:active,
+.g-main-flex nav ul li a:active,
+.footer-flex ul li a:active {
+    color: rgb(92, 229, 0);
+}
+
+.g-drpdwn-item{
+    background-color: rgb(252, 249, 241);
+    height: 60px;
+    position: relative;
+    width: 120px;
+}
+
+.g-header #current-page{
+    color: rgb(0, 45, 0);
+}
+
+.g-main-flex{
+   background-color: rgb(255, 214, 214);
+    padding-top: 15px;
+   margin: 15px;
+}
+
+.g-side{
+    display: flex;
+    background-color: rgb(237, 253, 239);
+    box-sizing: border-box;
+    width: 40%;
+    margin: 10px;
+}
+
+.g-side nav{
+    padding: 10px;
+}
+.g-side ul li{
+    /*border: solid black 1px;*/
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+
+.g-main-flex{
+    display: flex;
+    gap: 15px;
+}
+
+.g-bg{
+    background-color: rgb(241, 233, 233);
+    margin: 20px;
+}
+
+.gallary-img img{
+    flex: 1 1 300px;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 350px;
+    width: 350px;
+    margin: 10px;
+}
+
+.g-foot{
+    background-color: rgb(252, 249, 241);
+    text-align: center;
+    margin-top: auto;
+}
+
+/*.g-foot .footer-flex ul{
+    display: flex;
+    justify-content: center;
+}*/
+.g-foot p{
+    text-align: center;
+    margin: 0;
+    color: green;
+    padding-bottom: 10px;
+}
+
+.g-wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 10px;
+}
+.g-foot hr{
+    border: solid rgb(241, 233, 233) 1px;
+    margin-bottom: 10px;
+}

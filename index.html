@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Flexbox Example</title>
+</head>
+<body>
+  <div class="wrapper">
+   <div class="header">
+   <nav>
+    <a href="#">
+        <picture class="global-menu">
+            <!-- SVG version for all scenarios due to scalability and efficiency -->
+            <source srcset="./assets/logo/ECO_logo.svg" type="image/svg+xml" />
+            <!-- High resolution PNG for large screens -->
+            <source srcset="./assets/logo/ECO_logo_big.png" media="(min-width: 1024px)" type="image/png" />
+            <!-- Small PNG for medium screens -->
+            <source srcset="./assets/logo/ECO_logo_small.png" media="(min-width: 768px)" type="image/png" />
+            <!-- High resolution JPG for small screens (lower priority than PNG) -->
+            <source srcset="./assets/logo/ECO_logo_big.jpg" media="(min-width: 480px)" type="image/jpg" />
+            <!-- Fallback small JPG for all other scenarios or if none of the above are supported -->
+            <img src="./assets/logo/ECO_logo_small.jpg" alt="ECO company logo">
+        </picture>
+    </a>
+    
+    <ul class="global-menu">
+        <li class="global-item"><a href="#" id="current-page">HOME</a></li>
+        <li class="global-item"><a href="./pages/float-left-flex.html">Floated Left + Flexbox</a></li>
+        <li class="global-item"><a href="./pages/float-right-flex.html">Floated Right + Flexbox</a>
+            <!--Dropdown menu-->
+        <ul class="drpdwn">
+            <li class="drpdwn-item"><a href="#">Dropdown 1</a></li>
+            <li class="drpdwn-item"><a href="#">Dropdown 2</a></li>
+            <li class="drpdwn-item"><a href="#">Dropdown 3</a></li>
+            <li class="drpdwn-item"><a href="#">Dropdown 4</a></li>
+        </ul><!--Dropdown menu END-->
+        </li>
+        <li class="global-item"><a href="./pages/flexbox.html">Flexbox Layout</a></li>
+        <li class="global-item"><a href="./pages/flexbox-gallery.html">Gallery</a></li>
+    </ul>
+    </div>
+    </nav>
+
+    <main>
+        <section>
+            <header>
+            <h2>Section Title</h2>
+            </header>
+            <article>
+                <h3>Article Title</h3>
+                <p>Published <time datetime="2024-01-01">January 1st 2024</time> .</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed facere quo minima, alias qui nam nesciunt saepe vero impedit ab voluptas dignissimos placeat, quasi ea voluptatem eos. Ipsa, possimus excepturi.</p>
+            </article>
+        </section>
+    </main>
+
+    <a class="pagetop" href="#"><div class="pagetop__arrow"></div></a>
+
+    <footer>
+        <div class="footer-flex">
+        <ul aria-label="footer-navigation">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Cookies</a></li>
+        </ul>
+        </div>
+        <hr>
+        <p>&#169 2024 My Website</p>
+    </footer>
+ </div>
+</body>
+</html>
